@@ -10,21 +10,21 @@
     <div class="main">
         <h3>Enter your login credentials</h3>
 
-        <form action="">
+        <form action="" [formGroup]="profileForm">
             <label for="first">
                 Username:
             </label>
-            <input type="text" id="first" name="first"
+            <input type="text" id="first" name="first" formControlName="username"
                 placeholder="Enter your Username" required>
 
             <label for="password">
                 Password:
             </label>
-            <input type="password" id="password" name="password"
+            <input type="password" id="password" name="password" formControlName="password"
                 placeholder="Enter your Password" required>
 
             <div class="wrap">
-                <button type="submit">
+                <button type="submit" (click)="sendrequest()">
                     Submit
                 </button>
             </div>
