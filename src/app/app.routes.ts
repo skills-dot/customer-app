@@ -3,4 +3,5 @@ import { LoginComponent } from './login/login.component';
 import { CustomerdetailsComponent } from './customerdetails/customerdetails.component';
 
 export const routes: Routes = [{path:'',redirectTo:'/login',pathMatch:'full'},
-                               {path:'login',component:LoginComponent},{path:'user',component:CustomerdetailsComponent}];
+                               {path:'login',component:LoginComponent},
+                               {path:'user',component:CustomerdetailsComponent}];
