@@ -15,7 +15,8 @@ GetLoginDetails(userName:any,password:any):Observable<any>{
   httpheaders=httpheaders.append('Content-Type', 'application/json');
   httpheaders=httpheaders.append('username',userName);
   httpheaders=httpheaders.append('password',password);
-
+  httpheaders=httpheaders.append('Access-Control-Allow-Origin', 'https://httptriggerfunction.azurewebsites.net');
+  httpheaders=httpheaders.append('Access-Control-Allow-Credentials', 'true');
    return this.http.get('https://httptriggerfunction.azurewebsites.net/api/GetLoginDetails',{'headers':httpheaders});
 }
 
